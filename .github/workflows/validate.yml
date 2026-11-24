@@ -17,6 +17,8 @@ jobs:
       - uses: hacs/action@main
         with:
           category: integration
+          # Logo im home-assistant/brands-Repo erst, wenn es in den HACS-Standard soll
+          ignore: brands
 
   tests:
     runs-on: ubuntu-latest
