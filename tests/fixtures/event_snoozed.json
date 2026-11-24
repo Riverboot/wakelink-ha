@@ -1,0 +1,14 @@
+{
+  "v": 2,
+  "type": "event",
+  "seq": 42,
+  "epoch": "3f9c2a7d",
+  "sent_at": "2026-11-25T06:30:01+01:00",
+  "device": {"model": "Pixel 9 Pro XL", "manufacturer": "Google", "app_version": "1.1.0"},
+  "event": "snoozed",
+  "alarm_id": 1,
+  "alarm_name": "Arbeit",
+  "time": "06:30",
+  "snooze_minutes": 7,
+  "snooze_count": 2
+}

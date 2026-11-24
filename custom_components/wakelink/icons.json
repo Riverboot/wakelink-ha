@@ -1,0 +1,55 @@
+{
+  "entity": {
+    "sensor": {
+      "next_alarm": {
+        "default": "mdi:alarm"
+      },
+      "status": {
+        "default": "mdi:alarm-check",
+        "state": {
+          "ringing": "mdi:alarm-bell",
+          "snoozed": "mdi:alarm-snooze"
+        }
+      },
+      "snooze_round": {
+        "default": "mdi:alarm-snooze"
+      },
+      "last_seen": {
+        "default": "mdi:cellphone-check"
+      },
+      "household_next_alarm": {
+        "default": "mdi:home-clock"
+      }
+    },
+    "binary_sensor": {
+      "alarm_set": {
+        "default": "mdi:alarm-off",
+        "state": {
+          "on": "mdi:alarm-check"
+        }
+      },
+      "someone_waking": {
+        "default": "mdi:sleep",
+        "state": {
+          "on": "mdi:alarm-bell"
+        }
+      },
+      "all_awake": {
+        "default": "mdi:sleep",
+        "state": {
+          "on": "mdi:weather-sunny"
+        }
+      }
+    },
+    "calendar": {
+      "alarms": {
+        "default": "mdi:calendar-clock"
+      }
+    },
+    "event": {
+      "alarm": {
+        "default": "mdi:alarm"
+      }
+    }
+  }
+}

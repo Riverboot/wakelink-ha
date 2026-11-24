@@ -1,0 +1,30 @@
+{
+  "v": 2,
+  "type": "state",
+  "seq": 41,
+  "epoch": "3f9c2a7d",
+  "sent_at": "2026-11-24T21:14:03+01:00",
+  "device": {"model": "Pixel 9 Pro XL", "manufacturer": "Google", "app_version": "1.1.0"},
+  "status": "idle",
+  "ringing": null,
+  "snoozed_until": null,
+  "snooze_round": 0,
+  "alarms": [
+    {
+      "id": 1, "hour": 6, "minute": 30, "time": "06:30", "label": "Arbeit",
+      "enabled": true, "one_time": false, "days": [1, 2, 3, 4, 5],
+      "next_trigger": "2026-11-25T06:30:00+01:00"
+    },
+    {
+      "id": 2, "hour": 9, "minute": 0, "time": "09:00", "label": "",
+      "enabled": false, "one_time": true, "days": [],
+      "next_trigger": null
+    }
+  ],
+  "upcoming": [
+    {"alarm_id": 1, "label": "Arbeit", "at": "2026-11-25T06:30:00+01:00", "nap": false},
+    {"alarm_id": 1, "label": "Arbeit", "at": "2026-11-26T06:30:00+01:00", "nap": false}
+  ],
+  "ready": true,
+  "issues": [{"key": "battery_restricted", "critical": false}]
+}

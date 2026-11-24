@@ -1,0 +1,113 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "WakeLink",
+        "menu_options": {
+          "phone": "Connect a phone",
+          "household": "Add the household overview"
+        }
+      },
+      "phone": {
+        "title": "Connect a phone",
+        "description": "Name the phone and choose who it belongs to. The next step shows a code to scan with WakeLink.",
+        "data": {
+          "name": "Name",
+          "person": "Person",
+          "url": "Home Assistant URL"
+        },
+        "data_description": {
+          "name": "Shown in Home Assistant and in the app, e.g. the owner's name.",
+          "person": "Optional. The household only counts this phone while the person is at home.",
+          "url": "The address the phone uses at home. It needs to be reachable from your Wi-Fi."
+        }
+      },
+      "pair": {
+        "title": "Scan the code",
+        "description": "In WakeLink open Settings → Home Assistant → Connect and scan this code. You can also open this link on the phone:\n\n`{link}`\n\nAs soon as the app confirms the connection, select Submit.",
+        "data": {
+          "qr_code": "Code"
+        }
+      }
+    },
+    "error": {
+      "invalid_url": "Enter an address starting with http:// or https://.",
+      "not_connected": "The phone has not reported yet. Scan the code, check that the phone is on your home Wi-Fi, and try again."
+    },
+    "abort": {
+      "already_configured": "This is already set up."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Person",
+        "data": {
+          "person": "Person"
+        },
+        "data_description": {
+          "person": "The household only counts this phone while the person is at home."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "next_alarm": {
+        "name": "Next alarm"
+      },
+      "status": {
+        "name": "Alarm status",
+        "state": {
+          "idle": "Idle",
+          "ringing": "Ringing",
+          "snoozed": "Snoozing"
+        }
+      },
+      "snooze_round": {
+        "name": "Snooze round"
+      },
+      "last_seen": {
+        "name": "Last contact"
+      },
+      "household_next_alarm": {
+        "name": "Earliest alarm"
+      }
+    },
+    "binary_sensor": {
+      "alarm_set": {
+        "name": "Alarm set"
+      },
+      "problem": {
+        "name": "Alarm readiness"
+      },
+      "someone_waking": {
+        "name": "Someone is waking up"
+      },
+      "all_awake": {
+        "name": "Everyone awake"
+      }
+    },
+    "calendar": {
+      "alarms": {
+        "name": "Alarms"
+      }
+    },
+    "event": {
+      "alarm": {
+        "name": "Alarm",
+        "state_attributes": {
+          "event_type": {
+            "state": {
+              "triggered": "Ringing",
+              "snoozed": "Snoozed",
+              "dismissed": "Switched off",
+              "nap_scheduled": "Power nap set",
+              "pre_alarm": "Pre-alarm"
+            }
+          }
+        }
+      }
+    }
+  }
+}

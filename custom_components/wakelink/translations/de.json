@@ -1,0 +1,113 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "WakeLink",
+        "menu_options": {
+          "phone": "Handy verbinden",
+          "household": "Haushalts-Übersicht hinzufügen"
+        }
+      },
+      "phone": {
+        "title": "Handy verbinden",
+        "description": "Gib dem Handy einen Namen und wähle, wem es gehört. Im nächsten Schritt erscheint ein Code, den du mit WakeLink scannst.",
+        "data": {
+          "name": "Name",
+          "person": "Person",
+          "url": "Home-Assistant-Adresse"
+        },
+        "data_description": {
+          "name": "Erscheint in Home Assistant und in der App, z. B. der Name der Person.",
+          "person": "Optional. Der Haushalt zählt das Handy nur, solange die Person zu Hause ist.",
+          "url": "Die Adresse, unter der das Handy Home Assistant zu Hause erreicht."
+        }
+      },
+      "pair": {
+        "title": "Code scannen",
+        "description": "Öffne in WakeLink Einstellungen → Home Assistant → Verbinden und scanne diesen Code. Alternativ diesen Link auf dem Handy öffnen:\n\n`{link}`\n\nSobald die App die Verbindung bestätigt, auf Absenden tippen.",
+        "data": {
+          "qr_code": "Code"
+        }
+      }
+    },
+    "error": {
+      "invalid_url": "Bitte eine Adresse mit http:// oder https:// eingeben.",
+      "not_connected": "Das Handy hat sich noch nicht gemeldet. Code scannen, prüfen, ob das Handy im Heim-WLAN ist, und erneut versuchen."
+    },
+    "abort": {
+      "already_configured": "Ist bereits eingerichtet."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Person",
+        "data": {
+          "person": "Person"
+        },
+        "data_description": {
+          "person": "Der Haushalt zählt das Handy nur, solange die Person zu Hause ist."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "next_alarm": {
+        "name": "Nächster Wecker"
+      },
+      "status": {
+        "name": "Weckerstatus",
+        "state": {
+          "idle": "Bereit",
+          "ringing": "Klingelt",
+          "snoozed": "Schlummert"
+        }
+      },
+      "snooze_round": {
+        "name": "Schlummer-Runde"
+      },
+      "last_seen": {
+        "name": "Letzter Kontakt"
+      },
+      "household_next_alarm": {
+        "name": "Frühester Wecker"
+      }
+    },
+    "binary_sensor": {
+      "alarm_set": {
+        "name": "Wecker gestellt"
+      },
+      "problem": {
+        "name": "Weckbereitschaft"
+      },
+      "someone_waking": {
+        "name": "Jemand wird geweckt"
+      },
+      "all_awake": {
+        "name": "Alle wach"
+      }
+    },
+    "calendar": {
+      "alarms": {
+        "name": "Wecker"
+      }
+    },
+    "event": {
+      "alarm": {
+        "name": "Wecker",
+        "state_attributes": {
+          "event_type": {
+            "state": {
+              "triggered": "Klingelt",
+              "snoozed": "Schlummert",
+              "dismissed": "Ausgeschaltet",
+              "nap_scheduled": "Power Nap gestellt",
+              "pre_alarm": "Vorlauf"
+            }
+          }
+        }
+      }
+    }
+  }
+}
